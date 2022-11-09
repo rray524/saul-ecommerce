@@ -56,6 +56,9 @@ const UserOrderDetails = () => {
                             shipping: <strong>included</strong>
                         </ListGroup.Item>
                         <ListGroup.Item>
+                            tax: <strong>included</strong>
+                        </ListGroup.Item>
+                        <ListGroup.Item>
                             Total price: <strong>$100</strong>
                         </ListGroup.Item>
                         <ListGroup.Item>

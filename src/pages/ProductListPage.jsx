@@ -11,8 +11,10 @@ import AttributeFilter from '../components/filterQueryComponents/AttributeFilter
 import ProductForList from '../components/ProductForList';
 import PaginationComponent from '../components/PaginationComponent';
 import Button from 'react-bootstrap/esm/Button';
+import axios from 'axios'
 
 const ProductListPage = () => {
+    axios.get("/api/products").then((res) => console.log(res.data))
     return (
         <Container>
 

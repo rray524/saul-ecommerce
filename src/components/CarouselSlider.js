@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const CarouselSlider = () => {
     return (
-        <Carousel>
+        <Carousel style={{ position: 'relative' }} fade={true}>
             <Carousel.Item>
                 <img
                     className="d-block w-100"

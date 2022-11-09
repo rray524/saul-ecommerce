@@ -70,7 +70,8 @@ const AdminCreateProductPage = () => {
                             <Form.Label>Category</Form.Label> <CloseButton /> {" "} Remove Category
                             <Form.Control as="select" type="select" aria-label="Default select product-create" required>
                                 <option value="">Select Category</option>
-                                <option value="1">Color</option>
+                                <option value="1">Laptop/TV/Ipad</option>
+                                <option value="2">Mobile</option>
 
                             </Form.Control>
                             <Form.Control.Feedback type="invalid">Please select a category</Form.Control.Feedback>
