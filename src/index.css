@@ -25,3 +25,11 @@ footer {
     padding-top: 42px;
 
 }
+
+.spinner-parent {
+    position: relative;
+    display: flex;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+}

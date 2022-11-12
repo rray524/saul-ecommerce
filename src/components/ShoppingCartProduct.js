@@ -6,26 +6,28 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 
-const ShoppingCartProduct = () => {
+const ShoppingCartProduct = ({ item }) => {
+    console.log(item);
     return (
         <>
             <ListGroup.Item>
                 <Row style={{ alignItems: 'center' }}>
                     <Col md={2}>
-                        <Image fluid src="/imgs/book-category.jpg" />
+                        <Image fluid src={item.image.path} />
                     </Col>
                     <Col md={3}>
-                        <h5>Lorem, ipsum dolor.</h5>
+                        <h5>{item.name}</h5>
                     </Col>
                     <Col md={1}>
-                        <strong>$85</strong>
+                        <strong>${item.price}</strong>
                     </Col>
                     <Col md={3}>
-                        <Form.Select aria-label="Default select quantity">
-                            <option>Qty</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                        <Form.Select aria-label="Default select quantity" value={item.quantity} disabled={true}>
+                            {
+                                [...Array(item.stock).keys()].map((x, idx) => (
+                                    <option key={idx} value={x + 1}>{x + 1}</option>
+                                ))
+                            }
                         </Form.Select>
                     </Col>
                     <Col md={3}>
